@@ -149,7 +149,7 @@ async function addData(){
   }
   
   try {
-    const res = await fetch("https://jsnplaceholder.typicode.com/posts", {
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       body: JSON.stringify(payload)
     })
@@ -161,13 +161,25 @@ async function addData(){
     
     if (res.ok) {
       items.push(payload);
-      const modal = document.querySelector('.modal');
-      // modal.classList.remove('show'); 
-      modal.style.display = 'none';
-      const backdrop = document.querySelector('.modal-backdrop');
-      backdrop.style.display = 'none'
-      console.log(modal)// Remove 'show' class to hide the modal
+      // const modal = document.querySelector('.modal');
+      // // modal.classList.remove('show'); 
+      // modal.style.display = 'none';
+      // const backdrop = document.querySelector('.modal-backdrop');
+      // backdrop.style.display = 'none'
+      // console.log(modal)// Remove 'show' class to hide the modal
     }
+
+    userIdInput.value = "";
+    idInput.value = "";
+    titleInput.value = "";
+    bodyInput.value = "";
+    
+    
+    setTimeout(() => {
+      submitBtn.innerText = "Create"
+      submitBtn.disabled = false;
+      submitBtn.classList.remove("loading");
+    }, );
     
     fetchData(items);
   } catch (error) {
@@ -233,10 +245,10 @@ async function editData (){
       fetchData(editedItems);
 
 
-      const modal = document.getElementById('staticBackdrop');
-      const backdrop = document.querySelector(".modal-backdrop")
-      modal.style.display = 'none';
-      backdrop.style.display = "none"
+      // const modal = document.getElementById('staticBackdrop');
+      // const backdrop = document.querySelector(".modal-backdrop")
+      // modal.style.display = 'none';
+      // backdrop.style.display = "none"
 
       
       setTimeout(() => {
