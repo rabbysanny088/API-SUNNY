@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+td{
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-primary {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-danger {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.main{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 21px;
+  margin-bottom: 23px;
+}
+
+#filter-task{
+  padding: 5px;
+  outline: none;
+}
+
+
+.loading{
+  background-image: url(./img/Spinner-1s-200px\ \(1\).svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* styles.css */
+
+
